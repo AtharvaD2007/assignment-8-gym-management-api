@@ -1,25 +1,60 @@
-# Gym & Fitness Club API
+# 🏋️‍♂️ Gym & Fitness Club Management API
 
-This is the solution for Assignment 08: Gym & Fitness Club Management REST API.
+A RESTful **Gym & Fitness Club Management API** built using **Node.js, Express.js, MongoDB, Mongoose, Passport.js, Express-Session, and bcryptjs**.
 
-## Setup Instructions
+## 🚀 Live Deployment
 
-1. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
+[**https://assignment-8-gym-management-api-4p01.onrender.com**](https://assignment-8-gym-management-api-4p01.onrender.com)
 
-2. **Environment Variables:**
-   Copy `.env.example` to `.env` and set your `MONGO_URI`.
-   ```bash
-   cp .env.example .env
-   ```
+## 🛠️ Tech Stack
 
-3. **Start the Server:**
-   ```bash
-   npm run dev
-   ```
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* Passport.js
+* Express-Session
+* bcryptjs
+* dotenv
 
-## Note on Testing
-- Ensure your MongoDB instance is running locally or provide a valid Atlas URI.
-- The API relies on cookies for session management (`passport-local`). Ensure your client (Postman/ThunderClient) is configured to save cookies after hitting `/api/auth/login`.
+## ✨ Features
+
+* Member registration and login
+* Session-based authentication
+* Membership plans and expiry tracking
+* Membership renewal
+* Fitness class management
+* Class booking and cancellation
+* Class capacity validation
+* Expired membership tracking
+* Mongoose schema relationships and validation
+
+## 📌 Main API Routes
+
+| Method | Endpoint                  | Description              |
+| ------ | ------------------------- | ------------------------ |
+| POST   | `/api/auth/register`      | Register a new member    |
+| POST   | `/api/auth/login`         | Login                    |
+| GET    | `/api/auth/me`            | Get member profile       |
+| GET    | `/api/classes`            | View upcoming classes    |
+| GET    | `/api/classes/:id`        | View class details       |
+| POST   | `/api/classes`            | Create a fitness class   |
+| POST   | `/api/classes/:id/book`   | Book a class             |
+| DELETE | `/api/classes/:id/cancel` | Cancel a booking         |
+| PATCH  | `/api/members/:id/renew`  | Renew membership         |
+| GET    | `/api/members/expired`    | View expired memberships |
+
+## 🗄️ Database
+
+The API uses **MongoDB with Mongoose** for persistent data storage.
+
+Main models:
+
+* `User`
+* `FitnessClass`
+
+## 👨‍💻 Assignment
+
+**Assignment 08 – Gym & Fitness Club Management API**
+
+Backend Development Assignment.
